@@ -48,18 +48,27 @@
       background: #ffffff !important;
       border: 1px solid #cccccc;
       outline: none;
+      
       &::placeholder {
         //color: $first-color;
       }
       &:focus{
-        box-shadow: 0px 0px 6px 1px transparentize($color: $first-color, $amount: 0.75);;
+        box-shadow: 0px 0px 6px 1px transparentize($color: $first-color, $amount: 0.75);
         border-color: transparentize($color: $first-color, $amount: 0.75);
       }
+      &.error {
+        border: 1px solid red;
+        &:focus {
+          box-shadow: 0px 0px 6px 1px transparentize($color: red, $amount: 0.75);
+        }
+      }
+      
     }
     & > input[type="submit"] {
       cursor: pointer;
       height: 46px;
       border-width: 0;
+      margin-top: 10px;
 
       color: #fff;
       background-color: transparentize($color:  $first-color, $amount: 0.5) !important;
@@ -76,4 +85,16 @@
     color: $text-color;
     text-decoration: underline;
   }
+}
+
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+  padding: 15px 20px;
+  text-align: center;
+  background-color: white;
 }

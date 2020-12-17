@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+.schedule {
+  width: 400px;
+  margin-left: auto;
+  &-block {
+    padding: 4px 14px 10px 14px;
+    &__header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid $first-color;
+    }
+    &-item {
+      margin-top: 10px;
+      display: grid;
+      grid: 
+        "schedule-item__name schedule-item__time"
+        "schedule-item__teacher schedule-item__time"
+        / auto 50px;
+
+      &__name {
+        grid-area: schedule-item__name;
+        line-height: 1.25rem;
+      }
+      &__teacher {
+        grid-area: schedule-item__teacher;
+        font-size: 0.875rem;
+        margin-top: 4px;
+      }
+      &__time {
+        position: relative;;
+        grid-area: schedule-item__time;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        & > span:nth-child(1) {
+          margin-bottom: 6px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% - 1px);
+
+          width: 80%;
+          height: 1px;
+          background-color: $first-color;
+        }
+      }
+    }
+  }
+
+  .lesson-type {
+    padding: 2px 6px;
+    &-LK {
+      background-color: #FFEC8B;
+    }
+    &-LZ {
+      background-color:	#AB82FF;
+    }
+    &-PZ {
+      background-color: #87CEFF;
+    }
+  }
+}

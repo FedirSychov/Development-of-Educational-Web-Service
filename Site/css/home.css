@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  /* Имя шрифта */
+  src: url(../fonts/AdelleCyrillicRegular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+.person {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-right: 30px;
+}
+
+.person__photo {
+  max-width: 160px;
+  margin-right: 15px;
+}
+
+.person__photo > img {
+  width: 100%;
+}
+
+.person-content__name {
+  margin-bottom: 10px;
+}
+
+.person-content > div {
+  margin-bottom: 6px;
+}
+
+.tasks {
+  margin-top: 15px;
+}
+
+.tasks__header > span {
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.tasks__header > span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  z-index: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #005BAA;
+}
+
+.tasks-list__item {
+  margin-top: 8px;
+}
+
+.tasks-list__item > a > .abbreviation {
+  padding-right: 6px;
+  border-right: 2px solid #005BAA;
+}

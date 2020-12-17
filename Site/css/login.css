@@ -92,10 +92,22 @@
   border-color: rgba(0, 91, 170, 0.25);
 }
 
+.connect__form > input[type="text"].error,
+.connect__form > input[type="password"].error {
+  border: 1px solid red;
+}
+
+.connect__form > input[type="text"].error:focus,
+.connect__form > input[type="password"].error:focus {
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 0, 0, 0.25);
+          box-shadow: 0px 0px 6px 1px rgba(255, 0, 0, 0.25);
+}
+
 .connect__form > input[type="submit"] {
   cursor: pointer;
   height: 46px;
   border-width: 0;
+  margin-top: 10px;
   color: #fff;
   background-color: rgba(0, 91, 170, 0.5) !important;
 }
@@ -108,6 +120,19 @@
   display: inline-block;
   margin-top: 8px;
   font-size: 0.875rem;
-  color: #34618D;
+  color: #003768;
   text-decoration: underline;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 15px 20px;
+  text-align: center;
+  background-color: white;
 }

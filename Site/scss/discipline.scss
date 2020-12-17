@@ -1,0 +1,51 @@
+@import "variables.scss";
+
+.search {
+
+  &-field {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid $first-color;
+    padding-bottom: 10px;
+  }
+  &-results {
+    margin-top: 10px;
+    &__item {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+
+.discipline_add {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  & > input {
+    border: 2px solid $first-color;
+    padding: 6px 10px;
+
+    &:active {
+      border: 2px solid $first-color;
+    }
+  }
+  & > input[type=submit] {
+    background-color: $first-color;
+    padding: 6px 16px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.discipline {
+  &-title {
+
+  }
+  &-teacher {
+    
+  }
+}
+
+

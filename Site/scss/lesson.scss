@@ -1,0 +1,48 @@
+@import "variables.scss";
+
+.lesson {
+  &__title {
+    & > h2 {
+      display: inline-block;
+      padding: 4px 12px;
+      border-bottom: 2px solid $first-color;
+    }
+  }
+  &__text {
+    text-align: justify;
+    & > textarea {
+      width: 100%;
+    }
+  }
+}
+
+.practicals {
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    & > h2 {
+      padding: 4px 12px;
+      border-bottom: 2px solid $first-color;
+    }
+  }
+  &-list {
+    margin-top: 10px;
+    &__item {
+      margin-top: 8px;
+    }
+  }
+}
+
+.add_button {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $first-color;
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+}
